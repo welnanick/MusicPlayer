@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="play_button_text">Play</string>
+    <string name="pause_button_text">Pause</string>
+    <string name="volume_up_text">Vol Up</string>
+    <string name="volume_down_text">Vol Down</string>
+    <string name="credit_text">Music from http://www.bensound.com</string>
+</resources>
