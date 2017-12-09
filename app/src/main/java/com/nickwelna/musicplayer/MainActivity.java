@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.bensound_dubstep);
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+
+                Toast.makeText(MainActivity.this, "I'm Done", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
         Button playButton = findViewById(R.id.play_button);
         playButton.setOnClickListener(new View.OnClickListener() {
